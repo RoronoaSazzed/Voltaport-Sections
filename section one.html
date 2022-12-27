@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Four Sections</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      .flex__wrapper {
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+      }
+
+      .flex__item {
+        flex-basis: 25%;
+      }
+
+      .img__section {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 420px;
+        transition: 0.3s;
+      }
+
+      #one .img__section {
+        background-image: url(garden.png);
+      }
+
+      #one:hover .img__section {
+        background-image: url(garden-large.png);
+      }
+
+      #two .img__section {
+        background-image: url(car.png);
+      }
+
+      #two:hover .img__section {
+        background-image: url(car-large.png);
+      }
+
+      #three .img__section {
+        background-image: url(home.png);
+      }
+
+      #three:hover .img__section {
+        background-image: url(home-large.png);
+      }
+
+      #four .img__section {
+        background-image: url(biznes.png);
+      }
+
+      #four:hover .img__section {
+        background-image: url(biznes-large.png);
+      }
+
+      #one,
+      #two,
+      #three,
+      #four {
+        transition: 0.5s;
+      }
+
+      .flex__wrapper h2 {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 49px;
+        letter-spacing: 0.165em;
+        text-align: left;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        transition: 0.3s;
+      }
+
+      .flex__item:hover .titles {
+        color: #212322;
+      }
+
+      .flex__item:hover .arrow {
+        transform-origin: center;
+        transform-box: fill-box;
+        transform: rotate(90deg);
+      }
+
+      .arrow {
+        transition: 0.3s;
+      }
+
+      .flex__item:hover .arrow path {
+        stroke: #212322;
+      }
+
+      .flex__wrapper h4 {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+        letter-spacing: 0.29em;
+        text-align: left;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        transition: 0.3s;
+      }
+
+      .title__space {
+        padding: 80px 15px 5px 15px;
+        position: relative;
+      }
+
+      .title__space .arrow {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 20px;
+      }
+
+      #garden__title {
+        background-color: #3eb184;
+      }
+
+      #car__title {
+        background-color: #e4805c;
+      }
+
+      #home__title {
+        background-color: #dfcfc0;
+      }
+
+      #biznes__title {
+        background-color: #3f5d78;
+      }
+
+      @media (min-width: 1281px) {
+        #one:hover,
+        #two:hover,
+        #three:hover,
+        #four:hover {
+          flex-basis: 40%;
+        }
+      }
+
+      @media (min-width: 481px) and (max-width: 800px) {
+        .flex__wrapper {
+          flex-wrap: wrap;
+        }
+
+        .flex__item {
+          flex-basis: 50%;
+        }
+      }
+
+      @media (min-width: 320px) and (max-width: 480px) {
+        .flex__wrapper {
+          flex-direction: column;
+        }
+
+        #one,
+        #two,
+        #three,
+        #four {
+          flex-basis: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="flex__wrapper">
+        <div class="flex__item" id="one">
+          <div class="img__section"></div>
+          <div class="title__space" id="garden__title">
+            <h4 class="titles">seria</h4>
+            <h2 class="titles">garden</h2>
+            <svg
+              class="arrow"
+              width="100%"
+              min-height="0"
+              viewBox="0 0 79 79"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M26.25 2.25H76.25M76.25 2.25V52.25M76.25 2.25L2 76.5"
+                stroke="white"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="flex__item" id="two">
+          <div class="img__section"></div>
+          <div class="title__space" id="car__title">
+            <h4 class="titles">seria</h4>
+            <h2 class="titles">car</h2>
+            <svg
+              class="arrow"
+              width="100%"
+              min-height="0"
+              viewBox="0 0 79 79"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M26.25 2.25H76.25M76.25 2.25V52.25M76.25 2.25L2 76.5"
+                stroke="white"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="flex__item" id="three">
+          <div class="img__section"></div>
+          <div class="title__space" id="home__title">
+            <h4 class="titles">seria</h4>
+            <h2 class="titles">home</h2>
+            <svg
+              class="arrow"
+              width="100%"
+              min-height="0"
+              viewBox="0 0 79 79"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M26.25 2.25H76.25M76.25 2.25V52.25M76.25 2.25L2 76.5"
+                stroke="white"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="flex__item" id="four">
+          <div class="img__section"></div>
+          <div class="title__space" id="biznes__title">
+            <h4 class="titles">seria</h4>
+            <h2 class="titles">biznes</h2>
+            <svg
+              class="arrow"
+              width="100%"
+              min-height="0"
+              viewBox="0 0 79 79"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M26.25 2.25H76.25M76.25 2.25V52.25M76.25 2.25L2 76.5"
+                stroke="white"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
